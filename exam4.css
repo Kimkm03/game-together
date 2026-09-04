@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Space+Mono:wght@400;700&display=swap');
+
 body {
         text-align: center;
         margin-top: 50px;
     }
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Space+Mono:wght@400;700&display=swap');
-
 :root {
-    --background: #171717;
-    --panel: #242424;
-    --lime: #d7ff3f;
-    --coral: #ff6b6b;
-    --text: #f5f5f5;
-    --muted: #999;
+    --background: #fff3d6;
+    --panel: rgba(255, 255, 255, 0.9);
+    --lime: #ff75a0;
+    --coral: #ffb347;
+    --text: #49364b;
+    --muted: #8d768d;
 }
 
 * {
@@ -24,20 +24,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background:
-        radial-gradient(circle at 20% 10%, #3b3b3b 0 1px, transparent 1px),
-        var(--background);
-    background-size: 24px 24px;
     color: var(--text);
-    font-family: 'Space Mono', monospace;
+    font-family: 'Jua', sans-serif;
     text-align: center;
+
+    background:
+        linear-gradient(rgba(255, 243, 214, 0.72), rgba(255, 243, 214, 0.72)),
+        url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80')
+        center / cover fixed;
 }
 
 body::before {
     content: 'TYPE IT FAST';
     margin-bottom: 12px;
     color: var(--lime);
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Jua', sans-serif;
     font-size: clamp(2.5rem, 10vw, 7rem);
     letter-spacing: 0;
 }
@@ -50,7 +51,7 @@ body::before {
     border-radius: 24px;
     background: var(--panel);
     color: var(--lime);
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Jua', sans-serif;
     font-size: clamp(5rem, 25vw, 10rem);
     line-height: 1;
     box-shadow: 8px 8px 0 var(--coral);
