@@ -57,6 +57,7 @@ body::before {
     box-shadow: 8px 8px 0 var(--coral);
 }
 
+
 #score,
 #timer {
     width: min(90vw, 420px);
