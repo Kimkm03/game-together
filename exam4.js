@@ -57,7 +57,12 @@
         function endGame() {
             clearInterval(gameInterval);
             targetCharElement.innerText = ''; // 타겟 문자 제거
-            timerElement.innerText = `시간 초과! 최종 점수: ${score}`;
+            timerElement.innerText = `시간 초과!`;
+
+            scoreElement.style.display = 'none';
+            timerElement.style.display = 'none';
+            document.getElementById('resetButton').style.display = 'none';
+            document.getElementById('targetChar').innerText = `최종 점수: ${score}`;
             document.removeEventListener('keydown', checkInput); // 키 입력 이벤트 제거
             isGameRunning = false; // 게임 실행 상태를 종료로 설정
         }
@@ -69,6 +74,11 @@
 
             score = 0;
             timeLeft = 20;
+
+            scoreElement.style.display = 'block';
+            timerElement.style.display = 'block';
+            document.getElementById('resetButton').style.display = 'inline-block';
+
             scoreElement.innerText = `점수: ${score}`;
             timerElement.innerText = `남은 시간: ${timeLeft}`;
             setNewTargetChar(); // 첫 번째 타겟 문자 설정
@@ -82,6 +92,11 @@
             clearInterval(gameInterval); // 타이머 정지
             score = 0;
             timeLeft = 20;
+
+            scoreElement.style.display = 'block';
+            timerElement.style.display = 'block';
+            document.getElementById('resetButton').style.display = 'inline-block';
+
             scoreElement.innerText = '점수: 0';
             timerElement.innerText = '남은 시간: 20';
             targetCharElement.innerText = ''; // 타겟 문자 초기화
