@@ -9,6 +9,7 @@
         const targetCharElement = document.getElementById('targetChar');
         const scoreElement = document.getElementById('score');
         const timerElement = document.getElementById('timer');
+        const commentElement = document.getElementById('comment');
 
         // 점수 계산에서 제외할 키 리스트
         const excludedKeys = ['Shift', 'CapsLock'];
@@ -57,7 +58,7 @@
         function endGame() {
             clearInterval(gameInterval);
             targetCharElement.innerText = ''; // 타겟 문자 제거
-            timerElement.innerText = `시간 초과!`;
+            commentElement.innerText = `시간 초과!`;
 
             scoreElement.style.display = 'none';
             timerElement.style.display = 'none';
@@ -79,6 +80,7 @@
             timerElement.style.display = 'block';
             document.getElementById('resetButton').style.display = 'inline-block';
 
+            commentElement.innerText = '아래 문자를 입력하세요. (소/대문자 구분)';
             scoreElement.innerText = `점수: ${score}`;
             timerElement.innerText = `남은 시간: ${timeLeft}`;
             setNewTargetChar(); // 첫 번째 타겟 문자 설정
@@ -97,6 +99,7 @@
             timerElement.style.display = 'block';
             document.getElementById('resetButton').style.display = 'inline-block';
 
+            commentElement.innerText = '아래 문자를 입력하세요. (소/대문자 구분)';
             scoreElement.innerText = '점수: 0';
             timerElement.innerText = '남은 시간: 20';
             targetCharElement.innerText = ''; // 타겟 문자 초기화
